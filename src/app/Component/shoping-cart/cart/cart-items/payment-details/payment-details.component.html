@@ -1,0 +1,78 @@
+<div class="bg-dark">
+  <app-nav></app-nav>
+</div>
+<h1 align="center" style="color: #fff;">Welcome to Camera Bazar!!</h1>
+<br>
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6">
+      <div style="color: white;">
+        <div class="card-body">
+
+          <div class="card-header py-1">
+            <h2 class="my-0 fw-normal rounded-5" align="center" style="color: #fff;">Payment</h2>
+          </div>
+        <form style="color: #fff;">
+          <table>
+            <tr>
+              <td>
+                <label for="cardNumber" align="center" style="margin-left: 20px;">Card Number : </label>
+
+              </td>
+              <td>
+                <input type="text" placeholder="Credit Card #" name="cardNumber" align="center" style="margin-left: 30%;">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="expMonth" align="center" style="margin-left:20px">Expiration Month :</label>
+              </td>
+              <td>
+                <input type="text" placeholder="Expiration Month" name="expMonth" align="center" style="margin-left: 30%;">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="expYear" align="center" style="margin-left: 20px;">Expiration Year : </label>
+              </td>
+              <td>
+                <input type="text" placeholder="Expiration Year" name="expYear" align="center" style="margin-left: 30%;">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="cvc" align="center" style="margin-left: 20px;">CVC : </label>
+              </td>
+              <td>
+                <input type="text" placeholder="CVC" name="cvc" align="center" style="margin-left: 30%;">
+              </td>
+            </tr>
+            <tr></tr>
+          </table>
+
+
+
+        </form>
+        <!-- <span>
+          <button type="submit" class="btn btn-outline-primary rounded-3"
+          (click)="chargeCreditCard()" align="center" style="margin-left: 20px;"
+          (click)="addOrder()" [routerLink]="['/myOrder']">Submit</button>
+        </span> -->
+        </div>
+
+      </div>
+  </div>
+  <div class="col-md-3"></div>
+
+
+</div>
+
+<!-- <form>
+  <input type="text" placeholder="Credit Card #" name="cardNumber"><br>
+  <input type="text" placeholder="Expiration Month" name="expMonth"><br>
+  <input type="text" placeholder="Expiration Year" name="expYear"><br>
+  <input type="text" placeholder="CVC" name="cvc">
+  <button (click)="chargeCreditCard()">Submit</button>
+</form> -->

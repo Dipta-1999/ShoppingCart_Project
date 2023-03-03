@@ -1,0 +1,105 @@
+<h1 align="center" style="color: #fff;">Welcome to Camera Bazar!!</h1>
+<br>
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6 mb-5">
+        <div class="card">
+                <div class="card-body">
+                        <div class="card-header py-1">
+                            <h2 class="my-0 fw-normal rounded-5" align="center">Users Sign up Page</h2>
+                          </div>
+                        <form #Registerform="ngForm" (ngSubmit)="registerUser()">
+                            <!-- <small [class.text-danger]="['msg.status==500']">{{msg}}</small> -->
+                            <!-- Email -->
+                          <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" placeholder="Enter email" name="email"
+                            [(ngModel)]="user.emailId" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            #email="ngModel"
+                            [class.is-invalid]="email.invalid && email.touched">
+                            <div *ngIf="email.errors && (email.invalid && email.touched)">
+                                <small class="text-danger" *ngIf="email.errors?.['required']">Email Id is required field</small>
+                                <small class="text-danger" *ngIf="email.errors?.['pattern']">Enter the valid emailId</small>
+                            </div>
+                          </div>
+
+                          <!-- username -->
+                          <div class="form-group">
+                            <label for="username">User Name:</label>
+                            <input type="username" class="form-control" placeholder="Enter username" name="username"
+                                    [(ngModel)]="user.userName" required pattern="^[a-z]+[0-9]{1,4}$"
+                                    #username="ngModel"
+                                    [class.is-invalid]="username.invalid && username.touched">
+
+                            <div *ngIf="username.errors && (username.invalid && username.touched)">
+                                <small class="text-danger" *ngIf="username.errors?.['required']">User Name is required field</small>
+                                <small class="text-danger" *ngIf="username.errors?.['pattern']">Enter the valid User Name</small>
+                            </div>
+                          </div>
+
+                          <!-- password -->
+                          <label for="pwd">Password:</label>
+                          <div class="form-group inner-addon right-addon">
+                            <div class="input-group col-6 mx-auto">
+
+                              <input [type]="showPassword1 ? 'text' : 'password'" class="form-control" placeholder="Enter password" [(ngModel)]="user.password" name="password" [(ngModel)]="user.password" required #password="ngModel"
+                              [class.is-invalid]="password.invalid && password.touched" id="password-field">
+                              <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+
+                              <div>
+                                <i style="color: rgb(62, 57, 57);cursor: pointer;right: 0px;" alt="show" class="far fa-eye eye-show"
+                                   (click)="showPassword1 = !showPassword1"
+                                   [class.hide]="showPassword1"></i>
+                                <i style="color: rgb(62, 57, 57);cursor: pointer;right: 0px;" alt="hide" class="far fa-eye-slash eye-hide"
+                                   (click)="showPassword1 = !showPassword1"
+                                   [class.hide]="!showPassword1"></i>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <!-- confirm password -->
+                          <label for="cpwd">Confirm Password:</label>
+                          <div class="form-group inner-addon right-addon">
+                            <div class="input-group col-6 mx-auto">
+
+                              <input [type]="showPassword2 ? 'text' : 'password'" class="form-control" placeholder="Enter confirm password" name="cpassword" #cpassword="ngModel" (ngModel)="user.password" required
+                              [class.is-invalid]="cpassword.invalid && cpassword.touched" id="password-field">
+                              <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">Password and Confirm Password must be same</small>
+
+                              <div>
+                                <i style="color: rgb(62, 57, 57);cursor: pointer;right: 0px;" alt="show" class="far fa-eye eye-show"
+                                   (click)="showPassword2 = !showPassword2"
+                                   [class.hide]="showPassword2"></i>
+                                <i style="color: rgb(62, 57, 57);cursor: pointer;right: 0px;" alt="hide" class="far fa-eye-slash eye-hide"
+                                   (click)="showPassword2 = !showPassword2"
+                                   [class.hide]="!showPassword2"></i>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="checkbox">
+                            <label><input type="checkbox" name="remember"> Remember me</label>
+                          </div>
+                          <button type="submit" class="btn btn-outline-primary rounded-3">Sign up</button>
+
+
+
+
+                        </form>
+                        <br>
+                        <a type="submit" class="my-0 fw-normal rounded-5" [routerLink]="['/login']">Have accounts already? Log in</a>
+
+                    </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+

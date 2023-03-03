@@ -1,0 +1,68 @@
+<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+<div class="d-flex flex-column flex-md-row align-items-center pb-0 mb-3 border-bottom">
+    <a  class="d-flex align-items-center text-light text-decoration-none" style="margin-left:1%;margin-bottom: 0%; size: 100%;">
+      <app-header></app-header>
+    </a>
+
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto text-light text-decoration-none">
+      <a class="me-3 py-2 text-light text-decoration-none text" [routerLink]="['/nikon']">Nikon</a>
+      <a class="me-3 py-2 text-light text-decoration-none text" [routerLink]="['/canon']">Canon</a>
+      <a class="me-3 py-2 text-light text-decoration-none text" [routerLink]="['/sony']">Sony</a>
+      <!-- <a class="me-3 py-2 text-light text-decoration-none text" href="#">Support</a> -->
+
+    </nav>
+    <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+      <span style="color: aliceblue;">{{u.userName}}</span>
+      <input type="search" class="form-control"   placeholder="Search..." aria-label="Search">
+
+    </form> -->
+    <!-- <a *ngIf="loginStatus">{{showUser()}}</a> -->
+
+    <!-- <a>{{use.userName}}</a> -->
+    <!-- *ngIf="loginStatus" -->
+    <!-- <div class="btn">
+      <div class="btn btn-group btn-outline">
+        <a  class="btn btn-sm btn-outline-primary" *ngIf="!loginStatus" [routerLink] = "['/registration']" >Sign up</a>
+        <a  class="btn btn-sm btn-outline-secondary" *ngIf="!loginStatus"  [routerLink] = "['/login']"  (click)="login()">Log In</a>
+
+      </div>
+    </div>   -->
+
+
+
+
+    <div class="dropdown">
+      <a class="dropbtn d-block link-light text-decoration-none">
+
+        <svg  xmlns="http://www.w3.org/2000/svg" alt="mdo" width="35" height="35" fill="white"  viewBox="0 0 16 16" class="rounded-circle">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg>
+
+      </a>
+      <ul class="dropdown-content dropdown-menu text-small" style="position: absolute; inset: 14px 0px auto auto; margin: 4px; transform: translate3d(0px, 34px, 0px);">
+        <a class="dropdown-item" [routerLink]="['/shop']">Home</a>
+        <a class="dropdown-item" [routerLink] = "['/myOrder']">My Orders</a>
+        <!-- <a class="dropdown-item" href="#" >Track Orders</a> -->
+        <a class="dropdown-item" [routerLink] = "['/profile']" >Profile</a>
+
+        <hr class="dropdown-divider" >
+        <!-- <a class="dropdown-item"  *ngIf="!loginStatus"  [routerLink] = "['/login']"  (click)="login()">Sign in</a> -->
+        <a class="dropdown-item"  (click)="logout()" [routerLink] = "['/logout']">Sign out</a>
+      </ul>
+    </div>
+
+</div>
+

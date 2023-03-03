@@ -1,0 +1,10 @@
+.card{
+    color: #fff;
+    backdrop-filter: blur(30px);
+    background-color: rgba(105, 89, 89, 0.543);
+}
+.limitTextHeight {
+    height: 15px;
+    max-height: 15px;
+    overflow: hidden;
+}

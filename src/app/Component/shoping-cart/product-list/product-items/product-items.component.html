@@ -1,0 +1,43 @@
+<!-- <button type="submit" (ngsubmit)="getAllProducts()">Click</button> -->
+<div class="card shadow">
+
+    <img class="bd-placeholder-img card-img-top" width="90%" height="10%"
+    [src]="[(productItem.imgurl)]" style="padding:auto; width:100%;"/>
+
+    <div class="card-body">
+      <p class="card-text">
+        <strong>{{productItem.price | currency: 'INR'}}</strong>
+        <!-- <i *ngIf="addedToWishlist" class="fas fa-heart float-right" (click)="handleRemoveFromWishlist()"></i>
+        <i *ngIf="!addedToWishlist" class="fas fa-heart float-right" (click)="handleAddToWishlist()"></i> -->
+        <!-- <strong>{{productItem.name}}</strong> -->
+      </p>
+
+      <p class="card-text product-details" style="width:100%; height:100%;">ID: 00{{productItem.id}}_{{productItem.name | slice : 0:3}}...</p>
+      <p class="card-text product-details" style="width:100%; height:100%;">{{productItem.name | slice : 0:12}}</p>
+
+      <!-- <p class="card-text product-details" style="width:100%; height:100%;">{{productItemWishCart.description}}</p>
+       -->
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button"
+          class="btn btn-sm btn-outline-primary product-btn" style="backdrop-filter: blur(0px); color: rgb(147, 222, 236);"
+          (click)="handleAddToCart()">
+            Add to Cart
+          </button>
+          <button type="button"
+          class="btn btn-sm btn-outline-secondary product-btn bg-dark" style="backdrop-filter: blur(0px);"
+          (click)="viewDetails()">
+            View Details
+          </button>
+          <!-- <button (click)="handleRemoveFromCart()">remove</button> -->
+        </div>
+
+        <div class="btn">
+          <!-- <i *ngIf="addedToWishlist" class="fas fa-heart" style="color: rgb(232, 27, 95);" (click)="handleRemoveFromWishlist()"></i> -->
+          <i class="fas fa-heart float-right" (click)="handleAddToWishlist()"></i>
+          <!-- <i *ngIf="rem" class="fas fa-heart float-right" (click)="handleRemoveFromWishlist()"></i> -->
+        </div>
+
+      </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+
+<div class="card mb-4 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal" align="center">Filters</h4>
+    </div>
+    <div class="card-body filters">
+        <div class="form">
+          <form>
+             <label for="from">From</label><br>
+             <input type="number"  class="from" name="from" [(ngModel)]="p1">
+         </form>
+         <form >
+             <label for="to">To</label><br>
+             <input type="number" class="to" name="to" [(ngModel)]="p2">
+         </form>
+      </div>
+      <br>
+      <button type="button" class="w-100 btn btn-lg btn-outline-primary" (click)="filter()">Filter by Price</button>
+
+</div>
+
+
+
+  <!-- </div>
+  [(ngModel)]="p1" [ngModelOptions]="{standalone: true}" -->

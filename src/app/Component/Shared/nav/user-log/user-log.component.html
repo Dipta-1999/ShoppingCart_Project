@@ -1,0 +1,78 @@
+<!-- <lib-ng-toast></lib-ng-toast> -->
+<h1 align="center" style="color: #fff;">Welcome to Camera Bazar!!</h1>
+<br>
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6 mb-5">
+        <div class="card">
+                <div class="card-body">
+                        <div class="card-header py-1">
+                            <h2 class="my-0 fw-normal rounded-5" align="center">Users Login Page</h2>
+                          </div>
+                        <form #loginform="ngForm" (ngSubmit)="loginUser()">
+                            <!-- <small class="text-danger">{{msg}}</small> -->
+                          <div class="form-group">
+
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" placeholder="Enter email" name="email"
+                            [(ngModel)]="user.emailId" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            #email="ngModel"
+                            [class.is-invalid]="email.invalid && email.touched">
+
+                            <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small> -->
+
+                            <div *ngIf="email.errors && (email.invalid && email.touched)">
+                                <small class="text-danger" *ngIf="email.errors?.['required']">Email Id is required field</small>
+                                <small class="text-danger" *ngIf="email.errors?.['pattern']">Enter the valid emailId</small>
+                            </div>
+                          </div>
+                          <label for="pwd">Password:</label>
+                          <!-- <div class="row">
+                            <div class="col"> -->
+                            <div class="form-group inner-addon right-addon">
+                              <div class="input-group col-6 mx-auto">
+                                <input [type]="showPassword ? 'text' : 'password'" class="form-control pwd-control"
+                                placeholder="Enter password" name="pwd" [(ngModel)]="user.password"
+                                required #password="ngModel" id="password-field"
+                                [class.is-invalid]="password.invalid && password.touched"/>
+                                <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+
+                                <div>
+                                  <i style="color: rgb(62, 57, 57);cursor: pointer;right: 0px;" alt="show" class="far fa-eye eye-show"
+                                     (click)="showPassword = !showPassword"
+                                     [class.hide]="showPassword"></i>
+                                  <i style="color: rgb(62, 57, 57);cursor: pointer;right: 0px;" alt="hide" class="far fa-eye-slash eye-hide"
+                                     (click)="showPassword = !showPassword"
+                                     [class.hide]="!showPassword"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- </div>
+                          </div> -->
+
+
+
+
+
+
+                          <div class="checkbox">
+                            <label><input type="checkbox" name="remember"> Remember me</label>
+                          </div>
+                          <button type="submit" class="btn btn-outline-primary rounded-3">Login</button>
+                        </form>
+                        <br>
+                        <a type="submit" class="my-0 fw-normal rounded-5"  [routerLink]="['/registration']">No accounts? Sign up</a>
+                        <a type="submit" class="my-0 fw-normal rounded-5" align="right" style="float: right;" [routerLink]="['/forgotPassword']">Forgot Password?</a>
+                    </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+

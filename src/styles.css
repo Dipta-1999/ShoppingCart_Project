@@ -1,0 +1,28 @@
+.cart-item{
+    font-size: small;
+}
+.wishlist-item{
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product-btn
+{
+    font-size: xx-small;
+}
+.product-details{
+    font-size: small;
+}
+
+/* .back{
+    background-image: url("/bgCart.jpg");
+} */
+#ShpCrt{
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1488240339625-c4014e114224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bTl8ZW58MHx8MHx8&w=1000&q=80");
+    /* background-image:url("https://images.hdqwalls.com/wallpapers/camera-lens-abstract-4k-ly.jpg"); */
+    /*background-image: url("https://www.thoughtco.com/thmb/uHaqS2Nr_Z-DGRxVbWgId1tH66c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/film-photography-592347645-59e4d0609abed500119e7b14.jpg");*/
+    background-size: 100% ;
+    background-size: 100%;
+    /* https://images.unsplash.com/photo-1488240339625-c4014e114224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bTl8ZW58MHx8MHx8&w=1000&q=80 */
+}

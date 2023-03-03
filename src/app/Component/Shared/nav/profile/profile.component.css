@@ -1,0 +1,9 @@
+.card{
+    color: #fff;
+    backdrop-filter: blur(40px);
+    background-color: rgba(117, 90, 90, 0.2);
+}
+td{
+    padding-left: 25px;
+    
+}

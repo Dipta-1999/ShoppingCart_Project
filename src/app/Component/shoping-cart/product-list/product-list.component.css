@@ -1,0 +1,17 @@
+.card
+{
+    color: rgb(114, 102, 102);
+    backdrop-filter: blur(30px);
+    background-color:rgba(105, 89, 89, 0.543);
+}
+.card-body{
+    /* background: rgb(70, 68, 68); */
+    backdrop-filter: blur(40px);
+    background-color: rgba(42, 36, 36, 0.2);
+    align-items: center;
+}
+/* .card{
+    color: #fff;
+    backdrop-filter: blur(30px);
+    background-color:rgba(105, 89, 89, 0.543);
+} */

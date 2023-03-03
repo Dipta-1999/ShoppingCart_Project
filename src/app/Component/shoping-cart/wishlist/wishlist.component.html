@@ -1,0 +1,25 @@
+<div class="card mb-4 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal" align="center">My Wishlists</h4>
+    </div>
+    <div *ngIf="wishItems.length== 0" class="alert alert-info" style="font-size:small ;">Your Wishlists is EMPTY!!</div>
+    <div *ngIf="wishItems.length > 0" class="card-body">
+        <ul  class="list-group">
+
+            <ul class="list-group-items" *ngFor="let item of wishItems" [ngClass]="{'limitTextHeight': isReadMore}">
+                <app-wishlist-items [wishItem]="item"></app-wishlist-items>
+            </ul>
+            <p></p>
+            <button type="button" class="btn btn-sm btn-outline-primary product-btn" style="color: rgb(147, 222, 236); font-size: small;"
+            (click)="showText()">
+                {{ isReadMore ? 'Read More': 'Read Less' }}
+            </button>
+            <!-- <li class="list-group-item active">
+                <strong>Total : </strong>
+                {{wishTotal | currency: 'INR'}}
+            </li> -->
+        </ul>
+
+    </div>
+
+</div>

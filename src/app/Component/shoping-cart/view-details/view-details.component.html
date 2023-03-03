@@ -1,0 +1,66 @@
+<div class="bg-dark">
+    <app-nav></app-nav>
+  </div>
+  <h1 align="center" style="color: #fff;">Welcome to Camera Bazar!!</h1>
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow">
+        <img class="bd-placeholder-img card-img-top" width="10%" height="10%"
+        [src]="[(vd.imgurl)]" style="padding: 20px;width: 30%;height: 10%;"/>
+
+        <!-- <ngx-img-zoom
+          [zoomImageSrc]="vd.imgurl"
+          [previewImageSrc]="vd.imgurl"
+          [imgStyle]="'width:40%; height:40%;padding:auto;'"
+          [resultStyle]="'width:850px; height:850px; background-repeat: no-repeat; z-index: 2; position:absolute; -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); top: 0;left: 100%;'"
+          [lensStyle]="'width:155px; height:155px'"
+          [enableZoom]="enableZoom"
+
+          [containerStyle]=""
+        ></ngx-img-zoom> -->
+
+        <!-- <ngx-img-zoom
+            [thumbImage]=vd.imgurl
+            [fullImage]=vd.imgurl
+            [magnification]="1"
+            [enableScrollZoom]="true"
+            [enableLens]="true"
+            [lensWidth]="200"
+        ></ngx-img-zoom> -->
+
+        <!-- <lib-ngx-image-zoom
+
+            [fullImage]=vd.imgurl
+            [magnification]="5"
+            [enableScrollZoom]="true"
+            [enableLens]="true"
+            [lensWidth]="500"
+            [lensHeight]="500"
+            [circularLens]="true"
+        ></lib-ngx-image-zoom> -->
+        <div class="card-body">
+          <p class="card-text product-details" style="width:100%; height:100%;font-size: xx-large;">Name: {{vd.name}}</p>
+          <p class="card-text">
+
+            <strong>Price: {{vd.price | currency: 'INR'}}</strong>
+            <!-- <i *ngIf="addedToWishlist" class="fas fa-heart float-right" (click)="handleRemoveFromWishlist()"></i>
+            <i *ngIf="!addedToWishlist" class="fas fa-heart float-right" (click)="handleAddToWishlist()"></i> -->
+            <!-- <strong>{{productItem.name}}</strong> -->
+          </p>
+
+          <p class="card-text product-details" style="width:100%; height:100%;">ID: 00{{vd.id}}_{{vd.name}}</p>
+
+        </div>
+    </div>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+
+
+  <!-- </div>
+   -->

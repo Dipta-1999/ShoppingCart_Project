@@ -1,0 +1,40 @@
+<!-- <p style="color: white;">nikon works</p> -->
+<div class="bg-dark">
+  <app-nav></app-nav>
+</div>
+<h1 align="center" style="color: #fff;">Welcome to Camera Bazar!!</h1>
+<br>
+<div class="row">
+
+  <div class="col">
+
+  </div>
+  <div class="col-md-6 mb-5">
+      <div class="card">
+              <div class="card-body">
+                      <div class="card-header py-1">
+                          <h2 class="my-0 fw-normal rounded-5" align="center">Sony Products</h2>
+                      </div>
+                      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                          <!-- <div class="col"> -->
+                          <div class="col" *ngFor="let products of productDetails" >
+                            <app-nikon-items [productItem]="products"></app-nikon-items>
+                          </div>
+                      </div>
+
+              </div>
+      </div>
+  </div>
+  <div class="col">
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+

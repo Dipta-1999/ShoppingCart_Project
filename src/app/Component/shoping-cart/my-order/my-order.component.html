@@ -1,0 +1,57 @@
+<div class="bg-dark">
+  <app-nav></app-nav>
+</div>
+<h1 align="center" style="color: #fff;">Welcome to Camera Bazar!!</h1>
+<br>
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6">
+      <div style="color: white;">
+        <div *ngIf="or.length=== 0" class="card" style="font-size:large;font-family: 'Courier New', Courier, monospace;">
+          <h1>No Order to show!!</h1>
+
+        </div>
+        <div *ngIf="or.length> 0" class="card-body">
+          <mat-card *ngFor="let item of or | paginate: { itemsPerPage: 4, currentPage: p }" class="card">
+            <table style="align-items:center; border: 1px;">
+              <!-- <tbody> -->
+                <tr>
+                  <th>OrderId: </th>
+                  <td>Ord_{{item.id}}</td>
+                  <th style="padding-left:30px;">Date:</th>
+                  <td style="padding-left:10px;">{{item.date}}</td>
+                  <th style="padding-left:50px;">Product:</th>
+                  <td style="padding-left:10px;">{{item.product_name}}</td>
+                </tr>
+                <!-- <tr>
+                  <th>Product: </th>
+                  <td>{{item.product_name}}</td>
+                </tr> -->
+
+                <tr>
+                  <th>Quantity: </th>
+                  <td>{{item.quantity}}</td>
+                  <th style="padding-left:30px;"></th>
+                  <td style="padding-left:10px;"></td>
+                  <th style="padding-left:50px;">Price: </th>
+                  <td style="padding-left:10px;">{{item.price | currency:'INR'}}</td>
+                </tr>
+
+                <!-- <tr>
+                  <th>Price:</th>
+                  <td>{{item.price}}</td>
+                </tr> -->
+
+              <!-- </tbody> -->
+            </table>
+          </mat-card>
+          <pagination-controls (pageChange)="p = $event" align="center" style="font-size: large;color: #fff;"></pagination-controls>
+        </div>
+      </div>
+  </div>
+  <div class="col-md-3"></div>
+
+
+</div>

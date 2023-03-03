@@ -1,0 +1,50 @@
+
+
+
+<div class="row">
+
+  <div class="col-md-8">
+    <div class="card mb-4 rounded-3 shadow-sm" style="height:10%;width:90%;padding:auto;">
+
+      <div class="card-header">
+        <h4 class="my-0 fw-normal" align="center" style="color: #fff; padding: auto;">Products</h4>
+
+      </div>
+      <br>
+      <input class="card filers" type="text" placeholder="Search here..." [(ngModel)]="search">
+      <br>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <!-- <div class="col"> -->
+          <div class="col" *ngFor="let products of productDetails | filter:search | paginate: { itemsPerPage: 3, currentPage: e }" >
+            <app-product-items [productItem]="products" *ngIf="!filters"></app-product-items>
+          </div>
+
+      </div>
+      <pagination-controls (pageChange)="e = $event" align="center" style="color: #fff;align-items: center;"></pagination-controls>
+  </div>
+  </div>
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm" style="color: #fff;">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal" align="center">Filters</h4>
+      </div>
+      <div class="card-body filters">
+          <div class="form">
+            <form>
+               <label for="from">From</label><br>
+               <input type="number"  class="from" name="from" [(ngModel)]="p1">
+           </form>
+           <form >
+               <label for="to">To</label><br>
+               <input type="number" class="to" name="to" [(ngModel)]="p2">
+           </form>
+        </div>
+        <br>
+        <button type="button" class="w-100 btn btn-lg btn-outline-primary" style="color: rgb(147, 222, 236);" *ngIf="ff" (click)="filter()">Filter by Price</button>
+        <button type="button" class="w-100 btn btn-lg btn-outline-primary" style="color: rgb(147, 222, 236);" *ngIf="reset" (click)="resetPage()">Reset</button>
+
+  </div>
+
+  </div>
+</div>
+

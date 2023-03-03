@@ -1,0 +1,24 @@
+<div class="box cart-item">
+
+    <span>{{cartItem.name}}</span> x <span>{{cartItem.quantity}}:</span>
+    <strong>{{cartItem.quantity*cartItem.price | currency:'INR'}}</strong>
+
+    <span class="d-flex justify-content-between btn-group">
+        <button type="button" class="btn btn-sm btn-outline-primary product-btn"
+        (click)="handleRemoveFromCart(cartItem)"
+        style="color: rgb(147, 222, 236);font-weight: 600; font-size: x-small;font-family: 'Courier New', Courier, monospace;">Remove</button>
+
+        <button type="button" class="btn btn-sm btn-outline-primary product-btn"
+        (click)="pay(cartItem.quantity*cartItem.price)"
+
+        style="color: rgb(147, 222, 236);font-weight: 600; font-size: x-small;font-family: 'Courier New', Courier, monospace;"
+        >Add</button>
+    </span>
+
+
+</div>
+<!-- (click)="addOrder()"  [routerLink]="['/myOrder']" -->
+<!-- (click)="pay(cartItem.quantity*cartItem.price)"
+  [routerLink]="['/payment']"
+        [routerLink]="['/myOrder']" -->
+<p></p>

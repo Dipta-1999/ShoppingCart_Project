@@ -1,0 +1,51 @@
+<div class="box card mb-4 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal" align="center">Cart</h4>
+    </div>
+    <div *ngIf="cartItem.length=== 0" class="alert alert-info" style="font-size:small ;">Your Cart is EMPTY!!</div>
+    <div *ngIf="cartItem.length > 0" class="card-body">
+        <ul  class="list-group">
+
+            <ul class="list-group-items" *ngFor="let item of cartItem" [ngClass]="{'limitTextHeight': isReadMore}">
+                <app-cart-items [cartItem]="item"></app-cart-items>
+                <!-- <button (click)="handleRemoveFromCart(item)">Remove</button> -->
+            </ul>
+            <p></p>
+            <button type="button" class="btn btn-sm btn-outline-primary product-btn" style="color: rgb(147, 222, 236); font-size: small;" (click)="showText()">
+                {{ isReadMore ? 'Read More': 'Read Less' }}
+            </button>
+
+            <!-- <li style="backdrop-filter: blur(0px);">
+                <div class="d-flex justify-content-between align-items-center btn-group">
+
+                        <button type="button" class="btn btn-sm btn-outline-primary product-btn"
+                        style="backdrop-filter: blur(0px);color: rgb(147, 222, 236);" (click)="pay(cartTotal)" [routerLink]="['/myOrder']">
+                            Buy Total : {{cartTotal | currency: 'INR`'}}
+                        </button>
+
+                </div>
+            </li> -->
+        </ul>
+
+    </div>
+
+
+</div>
+
+<!-- <ul>
+    <li *ngFor="let item of items | slice:0:2">
+      {{ item }}
+    </li>
+    <ng-container *ngIf="isExpanded">
+      <ng-container *ngFor="let expandedItem of items; let i = index">
+        <li *ngIf="i >= 2">
+          {{ expandedItem }}
+        </li>
+      </ng-container>
+    </ng-container>
+    <li *ngIf="items.length > 2 && !isExpanded">
+      <button mat-button (click)="expandItems()">
+        Show all
+      </button>
+    </li>
+  </ul> -->

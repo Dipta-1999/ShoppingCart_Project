@@ -1,0 +1,19 @@
+.card{
+    color: #fff;
+    background: black;
+    backdrop-filter: blur(0px);
+    background-color: rgba(105, 89, 89, 0.543);
+}
+.fa-heart {
+    color: palevioletred;
+    cursor: pointer;
+  }
+.card-body{
+    background: rgb(70, 68, 68);
+    backdrop-filter: blur(0px);
+    background-color: rgba(105, 89, 89, 0.543);
+}
+img{
+  height: 150px;
+  width: fit-content;
+}
